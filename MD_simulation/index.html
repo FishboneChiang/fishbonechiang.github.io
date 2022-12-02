@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Molecular Dynamics</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='p5.min.js'></script>
+    <script src='main.js'></script>
+    <script src='functions.js'></script>
+    <style>
+        .post-header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1 {
+            color: #c9d0d4;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 46px;
+            font-weight: 100;
+            line-height: 50px;
+            letter-spacing: 1px;
+            padding: 0 0 40px;
+            border-bottom: double #555;
+        }
+
+        p {
+            color: #bbc3c8;
+            font-family: 'Verdana', sans-serif;
+            font-size: 16px;
+            line-height: 26px;
+            text-indent: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        a {
+            color: #c64119;
+            border-bottom: 1px solid #c64119;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #993213;
+            border-bottom: 1px solid #993213;
+        }
+
+        .date {
+            color: #bbc3c8;
+            background: #292929;
+            display: inline-block;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 0 0 20px 18px;
+            padding: 10px 12px 8px;
+            position: absolute;
+            bottom: -36px;
+        }
+
+        input {
+            font-size: 115%;
+        }
+
+        /* make buttons bigger */
+        input[type="range"] {
+            width: 90px;
+        }
+
+        /* make sliders shorter */
+        select {
+            font-size: 115%;
+        }
+
+        /* make selectors bigger too */
+    </style>
+</head>
+
+<body style='text-align: center; background-color:#1a1919;'>
+
+    <h1>Molecular Dynamics: Lennard-Jones Gas Simulation</h1>
+
+    <div>
+        <p style="text-align: justify;">"If, in some cataclysm, all of scientific knowledge were to be destroyed, and
+            only one sentence passed on to
+            the next generation of creatures, what statement would contain the most information in the fewest words? I
+            believe it is the atomic hypothesis that all things are made of atoms — little particles that move around in
+            perpetual motion, attracting each other when they are a little distance apart, but repelling upon being
+            squeezed into one another. In that one sentence, you will see, there is an enormous amount of information
+            about the world, if just a little imagination and thinking are applied."</p>
+        <p style="text-align: right;">-- Richard Feynman --</p>
+    </div>
+
+    <div id="simulation"></div>
+
+    <div>
+        <p></p>
+        <p style="display: inline;">Simulation:&nbsp</p>
+        <button onclick="resume()">Resume</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="reset()">Reset</button>
+        <p id="info1" style="text-align: center;"></p>&nbsp
+        <p style="display: inline;">Contrast: </p>
+        <input id="contrastSlider" type="range" min=0 max=100 step=1 value=40 oninput="setContrast()"></input>
+        &nbsp&nbsp
+        <p id="iter" style="display: inline;"></p>
+        <input id="iterSlider" type="range" min=1 max=200 step=2 value=100 oninput="setIter()"></input>
+        <p></p>
+        <p style='display: inline;'>External source:&nbsp</p>
+        <button onclick="cool()">Cool</button>
+        <button onclick="heat()">Heat</button>
+        &nbsp&nbsp&nbsp<p style='display:inline'>Gravity:&nbsp</p>
+        <button id="gravity" onclick="gravity()">Off</button>
+    </div>
+
+</body>
+
+</html>
