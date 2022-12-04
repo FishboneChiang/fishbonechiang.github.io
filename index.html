@@ -15,7 +15,7 @@
 
         h1 {
             color: #c9d0d4;
-            font-family: 'Helvetica Neue', sans-serif;
+            /* font-family: 'Helvetica Neue', sans-serif; */
             font-size: 30px;
             font-weight: 100;
             line-height: 50px;
@@ -27,13 +27,19 @@
 
         h2 {
             color: #c9d0d4;
-            font-family: 'Helvetica Neue', sans-serif;
+            /* font-family: 'Verdana', sans-serif; */
             font-size: 24px;
+        }
+
+        h3 {
+            color: #c9d0d4;
+            /* font-family: 'Verdana', sans-serif; */
+            font-size: 18px;
         }
 
         p {
             color: #bbc3c8;
-            font-family: 'Verdana', sans-serif;
+            /* font-family: 'Verdana', sans-serif; */
             font-size: 16px;
             /* line-height: 26px;
             text-indent: 30px; */
@@ -45,7 +51,8 @@
 
         a {
             color: #c64119;
-            border-bottom: 1px solid #c64119;
+            /* font-family: 'Verdana', sans-serif; */
+            /* border-bottom: 1px solid #c64119; */
             text-decoration: none;
         }
 
@@ -58,7 +65,7 @@
             color: #bbc3c8;
             background: #292929;
             display: inline-block;
-            font-family: 'Georgia', serif;
+            /* font-family: 'Georgia', serif; */
             font-style: italic;
             font-size: 18px;
             line-height: 22px;
@@ -83,18 +90,22 @@
         }
 
         /* make selectors bigger too */
+
+        .floatLeft{float:right;margin-left:20px;margin-right:20px}
     </style>
 </head>
 
-<body style='background-color:#1a1919; color: #bbc3c8;'>
+<body style='background-color:#1a1919; color: #bbc3c8; font-family: Verdana';>
 
     <h1>Li-Yuan Chiang</h1>
+    <link rel="stylesheet" Type="text/css" media="all">
+    <img src="fox.png" class="floatLeft" width="170px">
     <p>
         Hello! I'm Li-Yuan Chiang (姜理元), currently studying at National Taiwan University. 
     </p>
-    <h2>
+    <h3>
         Research Interests
-    </h2>
+    </h3>
     <li>
         Quantum Field Theory and Particle Physics
     </li>
@@ -104,10 +115,53 @@
     <li>
         Computational Physics: including optimization theory, machine learning, and physics simulations.
     </li>
-    <h2>
+    <h3>
         Publication
-    </h2>
+    </h3>
+    <p style="font-size: 14px;">
+        L.-Y. Chiang, Y.-t. Huang, W. Li, L. Rodina, H.-C. Weng,
+        Into the EFThedron and UV constraints from IR consistency. <br>
+        J. High Energ. Phys. 2022, 63 (2022).
+        <a href="https://doi.org/10.1007/JHEP03(2022)063">
+            https://doi.org/10.1007/JHEP03(2022)063
+        </a>
+    </p>
+    <h4>
+        Preprints (prepared for submission to JHEP)
+    </h4>
+    <p style="font-size: 14px;">
+        L.-Y. Chiang, Y.-t. Huang, W. Li, L. Rodina, H.-C. Weng, 
+        (Non)-projective bounds on gravitational EFT. <br>
+        J. High Energ. Phys. 2022, 63 (2022).
+        <a href="https://doi.org/10.1007/JHEP03(2022)063">
+            https://doi.org/10.1007/JHEP03(2022)063
+        </a>
+    </p>
+    <p style="font-size: 14px;">
+        L.-Y. Chiang, Y.-t. Huang, W. Li, L. Rodina, H.-C. Weng,
+        Into the EFThedron and UV constraints from IR consistency. <br>
+        J. High Energ. Phys. 2022, 63 (2022).
+        <a href="https://doi.org/10.1007/JHEP03(2022)063">
+            https://doi.org/10.1007/JHEP03(2022)063
+        </a>
+    </p>
 
-</body>
+    <h3> Leisure Activities </h3>
+    
+    <li>Physics Simulations</li>
+    <p><a href="https://fishbonechiang.github.io/MD_simulation/">
+        Molecular dynamics: Lennard-Jones gas simulation
+    </a></p>
+    <p><a href="https://fishbonechiang.github.io/barrier_scattering/">
+        Quantum mechanics: barrier scattering in 1D
+    </a></p>
+  
+    <li> Blog Posts (in Chinese) </li>
+    <p><a href="https://iphoc.blogspot.com/2020/10/ber.html">
+        Symmetries I: Symmetries and Physics
+    </a></p>
+    <p><a href="https://iphoc.blogspot.com/2020/12/blog-post_20.html">
+        Symmetries II: from Special to General Relativity
+    </a></p>
 
 </html>
